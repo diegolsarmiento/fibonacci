@@ -1,15 +1,8 @@
 function fib(num) {
- 	let serie = [];
-  
-    for (let i=0; i <= num; i++){
-     if (i>=2) {
-      serie.push((i-1) + (i-2)); 
-      } else {
-       serie.push(i);
-      }
-    }
-      
-     return console.log(serie[num-1]);
+ // Inneficient but does the job
+	if (num < 2) return num;
+    
+    return fib(num-1) + fib(num-2);
 }
-  
- fib(4);
+ console.log(fib(8));
+
